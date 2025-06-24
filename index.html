@@ -30,7 +30,7 @@
 </head>
 <body class="relative min-h-screen bg-black text-white overflow-x-hidden">
 
-  <!-- Fondo -->
+
   <div class="absolute inset-0 z-0 h-[60vh] md:h-[70vh]">
     <img
       src="https://assets.aboutamazon.com/dims4/default/6c50009/2147483647/strip/true/crop/1919x1080+1+0/resize/1240x698!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Ff8%2F96%2F2c8f70544f16a33a6bde1dcbe728%2Fsubs-pre-order-consent-background-image-cb578173463.jpg"
@@ -41,10 +41,10 @@
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
   </div>
 
-  <!-- Contenido -->
+
   <div class="relative z-10">
 
-    <!-- Header -->
+
     <header id="main-header" class="pt-3 pb-3 px-4 sm:pt-4 sm:pb-4 sm:px-6 flex items-center space-x-3 sm:space-x-4 text-white">
       <a href="javascript:window.history.back();" aria-label="Volver" class="text-white text-2xl sm:text-3xl flex-shrink-0">
         <i class="fas fa-chevron-left"></i>
@@ -58,7 +58,7 @@
 
       <div class="flex-1"></div>
 
-      <!-- Recomendadas aparece solo al hacer scroll -->
+
       <button id="header-recomendadas" class="opacity-0 transition-opacity duration-300 border border-white rounded-full px-3 py-1 text-xs sm:text-sm flex items-center space-x-1 whitespace-nowrap">
         <i class="fas fa-random"></i> <span>Aleatorio</span>
       </button>
@@ -66,18 +66,18 @@
 
     <main class="px-4 sm:px-6 pb-6 pt-14 max-w-7xl mx-auto">
 
-  <!-- Título y botón aleatorio -->
-  <div class="flex justify-between items-center mb-3">
+  
+<div class="flex justify-between items-center mb-3">
     <h1 id="main-title" class="text-3xl font-normal">Prime Video</h1>
     <button id="btn-recomendadas" class="border border-white rounded-full px-3 py-1 text-sm flex items-center">
       <i class="fas fa-random"></i>
     </button>
   </div>
 
-      <!-- Descripción -->
+
       <p id="description" class="text-white text-base mb-4 max-w-xl leading-relaxed">
         Amazon Prime Video: todo el entretenimiento que quieres, cuando quieras.
-Disfruta de películas taquilleras, series originales premiadas y una enorme variedad de géneros para toda la familia. Desde The Boys hasta grandes clásicos, todo en un solo lugar.
+Disfruta de peliculas taquilleras, series originales premiadas y una enorme variedad de generos para toda la familia. Desde The Boys hasta grandes clasicos, todo en un solo lugar.
       </p>
 
       <!-- Total -->
@@ -87,7 +87,6 @@ Disfruta de películas taquilleras, series originales premiadas y una enorme var
         <div class="border-b border-white w-16"></div>
       </div>
 
-  <!-- Contenedor de carteles -->
   <div id="posters-grid" class="grid grid-cols-3 sm:grid-cols-[repeat(auto-fit,_minmax(140px,_1fr))] gap-3 mt-3">
     <!--PEGAR CONTENIDO AQUI ABAJO-->
 
@@ -227,7 +226,6 @@ Disfruta de películas taquilleras, series originales premiadas y una enorme var
 
     observer.observe(description);
 
-    // Función para mezclar elementos aleatoriamente
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -245,8 +243,7 @@ Disfruta de películas taquilleras, series originales premiadas y una enorme var
 
     mainBtnRecomendadas.addEventListener('click', reorganizarPeliculas);
     headerBtnRecomendadas.addEventListener('click', reorganizarPeliculas);
-	
-// Mostrar el total de carteles
+
 const totalContenedor = document.getElementById('contenido-total');
 function actualizarTotalContenido() {
   const total = postersGrid.querySelectorAll('a').length;
